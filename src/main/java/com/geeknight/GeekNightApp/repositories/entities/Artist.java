@@ -26,9 +26,9 @@ public class Artist {
 
     public Artist() { }
 
-    @JsonProperty("genre")
-    private void unpackGenre(Map<String, Object> genre) {
-        this.genre_id = (Long) genre.get("id");
-        this.genre_name = (String) genre.get("name");
-    }
+//    @JsonProperty("genre")
+//    private void unpackGenre(Map<String, Object> genre) {
+//        this.genre_id = (Long) genre.get("id");
+//        this.genre_name = (String) genre.get("name");
+//    }
 }

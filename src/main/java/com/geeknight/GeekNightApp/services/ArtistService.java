@@ -1,6 +1,7 @@
 package com.geeknight.GeekNightApp.services;
 
 import com.geeknight.GeekNightApp.repositories.ArtistRepository;
+import com.geeknight.GeekNightApp.repositories.entities.Album;
 import com.geeknight.GeekNightApp.repositories.entities.Artist;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

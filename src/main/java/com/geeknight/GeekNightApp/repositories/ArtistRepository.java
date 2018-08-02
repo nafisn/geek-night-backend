@@ -1,5 +1,6 @@
 package com.geeknight.GeekNightApp.repositories;
 
+import com.geeknight.GeekNightApp.repositories.entities.Album;
 import com.geeknight.GeekNightApp.repositories.entities.Artist;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -15,5 +16,7 @@ public interface ArtistRepository extends JpaRepository<Artist, Long> {
 
     void update(Artist artist);
 
-    voi
+    void follow(long artistId);
+
+    void unfollow(long artistId);
 }
