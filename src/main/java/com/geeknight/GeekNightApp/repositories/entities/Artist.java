@@ -17,12 +17,26 @@ import java.util.Map;
 public class Artist {
 
     @Id
-    Long id;
-    String name;
-    
+    private long id;
+    private String name;
+    private long genre_id;
+    private String genre_name;
+    private long monthlyListeners;
+    private boolean following;
 
-
+    public Artist(long id, String name, long genre_id, String genre_name,
+                  long monthlyListeners, boolean following) {
+        this.id = id;
+        this.name = name;
+        this.genre_id = genre_id;
+        this.genre_name = genre_name;
+        this.monthlyListeners = monthlyListeners;
+        this.following = following;
+    }
 
     @JsonProperty("genre")
-    private void unpackGenre(Map<String, Object> genre)
+    private void unpackGenre(Map<String, Object> genre) {
+        this.genre_id = (Long) genre.get("id");
+        this.genre_name = (String) genre.get("name");
+    }
 }
