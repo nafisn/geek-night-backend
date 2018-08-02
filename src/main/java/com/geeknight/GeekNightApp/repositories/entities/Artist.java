@@ -24,15 +24,7 @@ public class Artist {
     private long monthlyListeners;
     private boolean following;
 
-    public Artist(long id, String name, long genre_id, String genre_name,
-                  long monthlyListeners, boolean following) {
-        this.id = id;
-        this.name = name;
-        this.genre_id = genre_id;
-        this.genre_name = genre_name;
-        this.monthlyListeners = monthlyListeners;
-        this.following = following;
-    }
+    public Artist() { }
 
     @JsonProperty("genre")
     private void unpackGenre(Map<String, Object> genre) {
